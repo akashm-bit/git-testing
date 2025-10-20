@@ -3,4 +3,11 @@ First text to be typed
 
 Changes made to learn how stash works
 Changes made from branch1
-shed changes
+
+
+changes made after pull and merge from branch1
+
+
+created a new branch because after branch1 got merged , any changes made from same branch , GitHub doesn’t automatically reopen a PR. So we have to create PR manually.
+The branch branch1 still exists, but GitHub doesn’t assume you want to make another PR from it.
+Best practice - Create new branch for new change/feature, like if old one is merged , if not , push will update exisiting PR
