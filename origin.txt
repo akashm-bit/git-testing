@@ -1,3 +1,6 @@
 First text to be typed
 
+
+Changes made to learn how stash works
 Changes made from branch1
+shed changes
