@@ -1,0 +1,3 @@
+Get Stashed
+
+git stash only works with tracked files, since this is a newly created file , Use git stash -u to include untracked files or track this file by doing git add . (better -> git add filecreatedTobeStashed.txt)
