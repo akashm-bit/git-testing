@@ -1,4 +1,0 @@
-Testing for rename (My issue -> i renamed files manually in vs code , pr was showing both old and new ones -> why(maybe because i didnt stage the deleted files) )
-
-Step 1 :Created rename from branch1 and got merged
-Step 2 : Renaming manually from branch2
