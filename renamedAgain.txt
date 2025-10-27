@@ -1,0 +1,61 @@
+Testing for rename (My issue -> i renamed files manually in vs code , pr was showing both old and new ones -> why(maybe because i didnt stage the deleted files) )
+
+Step 1 :Created rename from branch1 and got merged
+Step 2 : Renaming manually from branch2
+Step3: git automatically tracks it as rename if >50% file is same so , adding more content show bigger diff
+
+
+### 🧠 50 Lines of Random Git Trivia
+
+1. Git was written by Linus Torvalds in **April 2005** — in just about **two weeks**.
+2. He built it after a licensing dispute with BitKeeper, the Linux kernel’s previous SCM.
+3. The first Git commit message ever was:
+   > "Initial revision of 'git', the information manager from hell."
+4. Git’s name allegedly means “stupid content tracker.”
+5. “Git” in British slang also means a foolish or unpleasant person — Linus picked it deliberately.
+6. Every Git commit is a **snapshot**, not a diff.
+7. But Git stores snapshots efficiently by reusing unchanged blobs via content hashes.
+8. Git’s object database lives in `.git/objects/` and stores blobs, trees, commits, and tags.
+9. Git’s hashing algorithm used to be **SHA-1**, now transitioning to **SHA-256** for security.
+10. Each file version in Git is stored as a **zlib-compressed blob**.
+11. The `.git` folder is the *entire repository* — everything else is just a working tree.
+12. Deleting your project folder but keeping `.git/` means you can restore everything with `git checkout .`.
+13. `git reset --hard` doesn’t “delete” commits; it just moves `HEAD` to another pointer.
+14. Those commits remain in `.git/objects` until garbage collection runs.
+15. You can recover “lost” commits with `git reflog`.
+16. Git keeps a reflog for `HEAD` and for every branch, like `.git/logs/refs/heads/main`.
+17. Git’s internal database is basically a **key-value store** — keys are hashes, values are objects.
+18. The command `git cat-file -p <hash>` shows the raw content of any object.
+19. Git tags are just commit pointers with optional annotation objects.
+20. A branch is literally a text file in `.git/refs/heads/` containing a commit hash.
+21. Git merges by finding a **common ancestor** using the **lowest common ancestor (LCA)** algorithm.
+22. Merge conflicts happen when both branches modify overlapping hunks of the same file.
+23. Git rebases rewrite history by creating **new commits with different hashes**.
+24. `git cherry-pick` is a one-commit rebase.
+25. `git stash` is just a commit stored on a hidden branch (`refs/stash`).
+26. You can see all your stashes with `git log refs/stash`.
+27. You can apply a stash from any branch, not just the one you created it on.
+28. Git ignores empty folders because it only tracks files.
+29. `.gitkeep` is a convention, not a real Git feature.
+30. You can rename branches locally with `git branch -m old new`.
+31. You can push *current HEAD* to *any remote branch* with `git push origin HEAD:<branch>`.
+32. Git’s diff algorithm can be changed (try `git diff --patience`).
+33. Git blame shows who last modified each line, but merges confuse it.
+34. Use `git blame -w` to ignore whitespace changes.
+35. Git aliases can make commands simpler — `git config --global alias.co checkout`.
+36. `git bisect` can automatically find the commit that introduced a bug using binary search.
+37. `git rerere` (“reuse recorded resolution”) remembers how you resolved conflicts before.
+38. You can enable it permanently with `git config rerere.enabled true`.
+39. Git’s `index` (a.k.a. staging area) is a binary file: `.git/index`.
+40. It maps file paths → blob hashes → timestamps for the next commit.
+41. When you run `git add`, you’re really updating that index file.
+42. Git’s “plumbing” commands (`cat-file`, `hash-object`, etc.) power all the “porcelain” commands like `commit`.
+43. `git commit-tree` can create commits without using the working directory.
+44. Git doesn’t store file rename history explicitly; it *infers* renames based on similarity.
+45. The default rename detection threshold is 50% similarity.
+46. Git supports signed commits and tags using GPG or SSH keys.
+47. GitHub’s “verified” label appears when the commit signature matches a registered key.
+48. You can store multiple remotes — try `git remote add upstream <url>`.
+49. `git worktree` lets you check out multiple branches of the same repo simultaneously.
+50. Git’s design inspired tools like Mercurial, Fossil, and even parts of npm and Docker layer storage.
+
